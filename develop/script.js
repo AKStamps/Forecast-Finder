@@ -30,6 +30,14 @@ function renderItems(city, data) {
 function fetchGeoData(cityname) {
   var apiGeoLocation = `${weatherApiRootUrl}/geo/1.0/direct?q=${cityName}, US&appid=${weatherApiKey}`;
 
+  fetch(apiGeoLocation)
+  
+      .then(
+        function(response) {
+          return response.json();
+        }
+      )
+
 }
 function fetchWeather(location) {
  	var { lat } = location;
